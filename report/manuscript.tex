@@ -1,0 +1,46 @@
+\documentclass{article}
+
+\usepackage{graphicx}
+\graphicspath{ {../output/plots} }
+\usepackage{lipsum}
+\usepackage{float}
+
+\begin{document}
+\lipsum[1]
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.5\textwidth]{country_crowding}
+        \caption{countrycrowding}
+        \label{fig:country_crowding}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.5\textwidth]{country_freqs}
+        \caption{countryfreqs}
+        \label{fig:country_freqs}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.5\textwidth]{input}
+        \caption{input}
+        \label{fig:input}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.5\textwidth]{throughput}
+        \caption{throughput}
+        \label{fig:throughput}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.5\textwidth]{output}
+        \caption{output}
+        \label{fig:output}
+\end{figure}
+
+\end{document}
