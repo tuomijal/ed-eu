@@ -1,5 +1,8 @@
 # Own
 data
+*.aux
+*.log
+*.pdf
 
 # Editors
 .vscode/
