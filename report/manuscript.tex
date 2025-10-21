@@ -1,7 +1,6 @@
 \documentclass{article}
-
+\usepackage{booktabs}
 \usepackage{graphicx}
-\graphicspath{ {../output/plots} }
 \usepackage{lipsum}
 \usepackage{float}
 
@@ -23,19 +22,30 @@
 \lipsum[3]
 \section{Results}
 
+
+\subsection{Respondents}
+\input{../output/tables/respondents.tex}
+
+\input{../output/tables/hospitals.tex}
+
 \begin{figure}[H]
     \centering
-        \includegraphics[width=0.5\textwidth]{../output/plots/country_crowding}
+        \includegraphics[width=0.7\textwidth]{../output/plots/country_freqs}
+        \caption{countryfreqs}
+        \label{fig:country_freqs}
+\end{figure}
+
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.7\textwidth]{../output/plots/country_crowding}
         \caption{countrycrowding}
         \label{fig:country_crowding}
 \end{figure}
 
-\begin{figure}[H]
-    \centering
-        \includegraphics[width=0.5\textwidth]{../output/plots/country_freqs}
-        \caption{countryfreqs}
-        \label{fig:country_freqs}
-\end{figure}
+\subsection{Causes}
+
+
 
 \begin{figure}[H]
     \centering
@@ -57,6 +67,11 @@
         \caption{output}
         \label{fig:output}
 \end{figure}
+
+\subsection{Operations management}
+
+\subsection{Demand planning}
+
 
 \section{Discussion}
 \lipsum[5]
