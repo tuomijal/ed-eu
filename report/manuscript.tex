@@ -3,6 +3,7 @@
 \usepackage{graphicx}
 \usepackage{lipsum}
 \usepackage{float}
+\usepackage{subcaption}
 
 \title{European Emergency Department Crowding Study}
 \author{EEDCS consortium}
@@ -10,11 +11,9 @@
 \begin{document}
 \maketitle
 
-
 \begin{abstract}
     \lipsum[1]    
 \end{abstract}
-
 
 \section{Introduction}
 \lipsum[2]
@@ -35,17 +34,7 @@
         \label{fig:country_freqs}
 \end{figure}
 
-
-\begin{figure}[H]
-    \centering
-        \includegraphics[width=0.7\textwidth]{../output/plots/country_crowding}
-        \caption{countrycrowding}
-        \label{fig:country_crowding}
-\end{figure}
-
 \subsection{Causes}
-
-
 
 \begin{figure}[H]
     \centering
@@ -91,8 +80,37 @@
         \label{fig:crowding_map}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=0.7\textwidth]{../output/plots/country_crowding}
+        \caption{countrycrowding}
+        \label{fig:country_crowding}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=1.0\textwidth]{../output/plots/interventions}
+        \caption{Interventions}
+        \label{fig:interventions}
+\end{figure}
+
 \subsection{Demand planning}
 
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{../output/plots/benefit}
+        \caption{Would sufficiently accurate patient volume forecasting or crowding early warning software help alleviate the crowding problem?}
+        \label{fig:benefit}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \includegraphics[width=\textwidth]{../output/plots/software_usage}
+        \caption{Do you currently use a patient volume forecasting or crowding early warning software to guide decision making?}
+        \label{fig:software_usage}
+    \end{subfigure}
+    \caption{}
+    \label{fig:software_usage}
+\end{figure}
 
 \section{Discussion}
 \lipsum[5]
