@@ -4,6 +4,8 @@
 \usepackage{lipsum}
 \usepackage{float}
 \usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{rotating}
 
 \title{European Emergency Department Crowding Study}
 \author{EEDCS consortium}
@@ -24,15 +26,16 @@
 
 \subsection{Respondents}
 \lipsum[4-6]
-\input{../output/tables/respondents.tex}
-\input{../output/tables/hospitals.tex}
+% \input{../output/tables/respondents.tex}
+% \input{../output/tables/hospitals.tex}
+\input{../output/tables/description.tex}
 
-\begin{figure}[H]
-    \centering
-        \includegraphics[width=0.7\textwidth]{../output/plots/country_freqs}
-        \caption{countryfreqs}
-        \label{fig:country_freqs}
-\end{figure}
+% \begin{figure}[H]
+%     \centering
+%         \includegraphics[width=0.7\textwidth]{../output/plots/country_freqs}
+%         \caption{countryfreqs}
+%         \label{fig:country_freqs}
+% \end{figure}
 
 \subsection{Causes}
 \lipsum[4-6]
@@ -49,7 +52,7 @@
 
 \begin{figure}[H]
     \centering
-        \includegraphics[width=0.5\textwidth]{../output/plots/severity}
+        \includegraphics[width=1.0\textwidth]{../output/plots/severity}
         \caption{severity}
         \label{fig:severity}
 \end{figure}
