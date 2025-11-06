@@ -1,8 +1,10 @@
 # Own
+conversion.py
 data
 *.aux
 *.log
 *.pdf
+*.xlsx
 
 # Editors
 .vscode/

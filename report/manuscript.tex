@@ -7,6 +7,8 @@
 \usepackage{multirow}
 \usepackage{rotating}
 \usepackage{makecell}
+\usepackage{xcolor}
+\usepackage{amsmath}
 
 
 \title{European Emergency Department Crowding Study}
@@ -21,9 +23,60 @@
 \end{abstract}
 
 \section{Introduction}
-\lipsum[1-8]
+
+Emergency department is both a door and a window. For the patient it is a door to sometimes lifesaving care and always to instant care when all other healthcare system constituents have failed. For a healthcare operations researcher it is a window to 
+
+Healthcare systems in developed countries are struggling with the burden caused by ageing populations. One of the most prominent manifestations of this mismatch between supply and demand is 
+
+\textcolor{red}{Lisäanalyysi: ruuhka terveydenhuollon kustannusten funktiona}
+\textcolor{red}{Lisäanalyysi: ruuhka yksityinen vs. julkinen terveydenhuolto}
+
+Every year an increasing number of forecasting articles are published but no one knows what is the most important target to forecast. Association between crowding and mortality has been repeatedly documented but no one knows what is the definition for crowding that is actually used in practice.
+
+In this article we aim to address these issues by engaging with the emergency department physicians and asking these questions directly from them. 
+
 \section{Materials and methods}
-\lipsum[9-12]
+\lipsum[9-11]
+
+Individual-Level Mean (ILM)
+
+\[
+\bar{Y}_{\text{individual}} = \frac{1}{N} \sum_{k=1}^{N} Y_k
+\]
+
+Facility-Level Mean (FLM)
+
+
+
+Equal-Weight Mean (EWM)
+
+\[
+\bar{x}_i = \frac{1}{n_i} \sum_{j=1}^{n_i} x_{ij}
+\]
+
+\[
+\bar{x}_{\text{equal}} = \frac{1}{N} \sum_{i=1}^{N} \bar{x}_i
+\]
+
+Population-Standardized Mean (PSM)
+
+% Global population-weighted mean
+\[
+\bar{Y}_{\text{global}} = \sum_{j=1}^{J} w_j \, \bar{Y}_j
+\]
+
+% Country-level mean
+\[
+\bar{Y}_j = \frac{1}{n_j} \sum_{i=1}^{n_j} Y_{ij}
+\]
+
+% Population weight
+\[
+w_j = \frac{P_j}{\sum_{k=1}^{J} P_k}
+\]
+
+
+
 \section{Results}
 
 
@@ -51,7 +104,7 @@
 \end{figure}
 
 \subsection{Operations management}
-\lipsum[4-6]
+\lipsum[4]
 
 \begin{figure}[H]
     \centering
@@ -60,12 +113,16 @@
         \label{fig:severity}
 \end{figure}
 
+\lipsum[5]
+
 \begin{figure}[H]
     \centering
         \includegraphics[width=1.0\textwidth]{../output/plots/definition}
         \caption{definition}
         \label{fig:definition}
 \end{figure}
+
+\lipsum[6]
 
 \begin{figure}[H]
     \centering
@@ -74,12 +131,16 @@
         \label{fig:crowding_map}
 \end{figure}
 
+\lipsum[7]
+
 \begin{figure}[H]
     \centering
         \includegraphics[width=1.0\textwidth]{../output/plots/country_crowding}
         \caption{countrycrowding}
         \label{fig:country_crowding}
 \end{figure}
+
+\lipsum[8]
 
 \begin{figure}[H]
     \centering
@@ -89,7 +150,7 @@
 \end{figure}
 
 \subsection{Demand planning}
-\lipsum[4-6]
+\lipsum[4]
 
 \begin{figure}[H]
     \centering
@@ -107,12 +168,16 @@
     \label{fig:usage}
 \end{figure}
 
+\lipsum[5]
+
 \begin{figure}[H]
     \centering
         \includegraphics[width=1.0\textwidth]{../output/plots/horizon}
         \caption{Horizon}
         \label{fig:horizon}
 \end{figure}
+
+\lipsum[6]
 
 \section{Discussion}
 \lipsum[1-8]
