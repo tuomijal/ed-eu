@@ -38,42 +38,50 @@ In this article we aim to address these issues by engaging with the emergency de
 \section{Materials and methods}
 \lipsum[9-11]
 
-Individual-Level Mean (ILM)
+Respondent level: Unprocessed respondent data
 
-\[
-\bar{Y}_{\text{individual}} = \frac{1}{N} \sum_{k=1}^{N} Y_k
-\]
+Hospital level: Mean of the responses in a hospital if there were multiple responses from the same hospital
 
-Facility-Level Mean (FLM)
+Country level: Mean of the hospital level means
+
+Europe level: Population weighted mean of the country level mean
+
+% Individual-Level Mean (ILM)
+
+% \[
+% \bar{Y}_{\text{individual}} = \frac{1}{N} \sum_{k=1}^{N} Y_k
+% \]
+
+% Facility-Level Mean (FLM)
 
 
 
-Equal-Weight Mean (EWM)
+% Equal-Weight Mean (EWM)
 
-\[
-\bar{x}_i = \frac{1}{n_i} \sum_{j=1}^{n_i} x_{ij}
-\]
+% \[
+% \bar{x}_i = \frac{1}{n_i} \sum_{j=1}^{n_i} x_{ij}
+% \]
 
-\[
-\bar{x}_{\text{equal}} = \frac{1}{N} \sum_{i=1}^{N} \bar{x}_i
-\]
+% \[
+% \bar{x}_{\text{equal}} = \frac{1}{N} \sum_{i=1}^{N} \bar{x}_i
+% \]
 
-Population-Standardized Mean (PSM)
+% Population-Standardized Mean (PSM)
 
-% Global population-weighted mean
-\[
-\bar{Y}_{\text{global}} = \sum_{j=1}^{J} w_j \, \bar{Y}_j
-\]
+% % Global population-weighted mean
+% \[
+% \bar{Y}_{\text{global}} = \sum_{j=1}^{J} w_j \, \bar{Y}_j
+% \]
 
-% Country-level mean
-\[
-\bar{Y}_j = \frac{1}{n_j} \sum_{i=1}^{n_j} Y_{ij}
-\]
+% % Country-level mean
+% \[
+% \bar{Y}_j = \frac{1}{n_j} \sum_{i=1}^{n_j} Y_{ij}
+% \]
 
-% Population weight
-\[
-w_j = \frac{P_j}{\sum_{k=1}^{J} P_k}
-\]
+% % Population weight
+% \[
+% w_j = \frac{P_j}{\sum_{k=1}^{J} P_k}
+% \]
 
 
 
@@ -178,6 +186,13 @@ w_j = \frac{P_j}{\sum_{k=1}^{J} P_k}
 \end{figure}
 
 \lipsum[6]
+
+\begin{figure}[H]
+    \centering
+        \includegraphics[width=1.0\textwidth]{../output/plots/enabled}
+        \caption{Enabled}
+        \label{fig:enabled}
+\end{figure}
 
 \section{Discussion}
 \lipsum[1-8]

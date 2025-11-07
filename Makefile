@@ -11,7 +11,8 @@ PLOTS = output/plots/severity.png\
 		output/plots/country_crowding.png\
 		output/plots/interventions.png\
 		output/plots/usage.png\
-		output/plots/horizon.png
+		output/plots/horizon.png\
+		output/plots/enabled.png\
 
 TABLES = output/tables/description.tex
 
