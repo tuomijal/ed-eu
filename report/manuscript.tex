@@ -40,48 +40,39 @@ In this article we aim to address these issues by engaging with the emergency de
 
 Respondent level: Unprocessed respondent data
 
-Hospital level: Mean of the responses in a hospital if there were multiple responses from the same hospital
+Hospital-level mean
 
-Country level: Mean of the hospital level means
+\begin{equation}
+\bar{y}_{jk} = \frac{1}{n_{jk}} \sum_{i=1}^{n_{jk}} y_{ijk}
+\end{equation}
 
-Europe level: Population weighted mean of the country level mean
+where $y_{ijk}$ is response of respondent $i$ in hospital j in country k,
+and $n_{jk}$ is number of respondents in that hospital.
 
-% Individual-Level Mean (ILM)
+Country-level mean (mean of hospital means)
 
-% \[
-% \bar{Y}_{\text{individual}} = \frac{1}{N} \sum_{k=1}^{N} Y_k
-% \]
+\begin{equation}
+\bar{y}{k}^{(H)} = \frac{1}{m_k} \sum{j=1}^{m_k} \bar{y}_{jk}
+\end{equation}
 
-% Facility-Level Mean (FLM)
+where $m_k = number of hospitals in country k$.
 
+(If you prefer the respondent-weighted version instead, use)
 
+\begin{equation}
+\bar{y}{k}^{(R)} = \frac{1}{N_k} \sum{j=1}^{m_k} n_{jk} \, \bar{y}_{jk}
+\end{equation}
 
-% Equal-Weight Mean (EWM)
+with \[N_k = \sum_{j=1}^{m_k} n_{jk}.\]
 
-% \[
-% \bar{x}_i = \frac{1}{n_i} \sum_{j=1}^{n_i} x_{ij}
-% \]
+Europe-level population-weighted mean
 
-% \[
-% \bar{x}_{\text{equal}} = \frac{1}{N} \sum_{i=1}^{N} \bar{x}_i
-% \]
+\begin{equation}
+\bar{y}{E} = \frac{\sum{k=1}^{K} w_k \, \bar{y}{k}^{(H)}}{\sum{k=1}^{K} w_k}
+\end{equation}
 
-% Population-Standardized Mean (PSM)
-
-% % Global population-weighted mean
-% \[
-% \bar{Y}_{\text{global}} = \sum_{j=1}^{J} w_j \, \bar{Y}_j
-% \]
-
-% % Country-level mean
-% \[
-% \bar{Y}_j = \frac{1}{n_j} \sum_{i=1}^{n_j} Y_{ij}
-% \]
-
-% % Population weight
-% \[
-% w_j = \frac{P_j}{\sum_{k=1}^{J} P_k}
-% \]
+where $w_k$ is population weight (or sample weight) for country k,
+and K is number of countries in Europe.
 
 
 
@@ -107,7 +98,7 @@ Europe level: Population weighted mean of the country level mean
 \begin{figure}[p]
     \centering
         \includegraphics[height=1.0\textheight]{../output/plots/causes}
-        \caption{causes}
+        \caption{Perceived causes of crowding based on EU-level statistics.}
         \label{fig:causes}
 \end{figure}
 
