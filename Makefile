@@ -13,6 +13,7 @@ PLOTS = output/plots/severity.png\
 		output/plots/usage.png\
 		output/plots/horizon.png\
 		output/plots/enabled.png\
+		output/plots/protocol.png\
 
 TABLES = output/tables/description.tex
 
