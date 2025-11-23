@@ -1,3 +1,4 @@
-# European emergency department crowding study
+# Emergency department crowding in Europe: Causes, effects, extent and solutions as evaluated by 364 emergency department physicians from 25 European countries
 
 
+Healthcare systems worldwide are struggling with the burden of ageing populations and with the ever increasing demand for healthcare services it creates. One prominent manifestation of this issue is emergency department crowding which has been established as a severe public health issue that severely compromises patient safety all around the world. In this extensive survey, we report the perspective of 364 clinicians from 25 European countries on the causes, extent, effects and solutions to the crowding problem.
