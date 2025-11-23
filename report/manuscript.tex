@@ -12,7 +12,7 @@
 
 
 \title{Emergency department crowding in Europe: Causes, effects, extent and solutions as evaluated by 364 emergency department physicians}
-\author{European emergency department crowding study consortium\footnote{EEDCS was conducted as a joint effort by the Research commitee of the European Society for Emergency Medicine (EUSEM), EUSEM Research Network (EUSEM RN) and Tampere Univeristy, Finland. The full list of authors along their contributions is provided at the end of the article.}}
+\author{European emergency department crowding study consortium\footnote{EEDCS was conducted as a joint effort by the Research commitee of the European Society for Emergency Medicine (EUSEM RC), EUSEM Research Network (EUSEM RN) and Tampere Univeristy, Finland. The full list of authors along their contributions is provided at the end of the article.}}
 
 \begin{document}
 \maketitle
@@ -45,45 +45,33 @@ In this article, we aim to bridge the gap between policymakers, emergency depart
 
 
 \section{Materials and methods}
-\lipsum[9-11]
 
-Respondent level: Unprocessed respondent data
+\subsection{Data collection}
 
-Hospital-level mean
+Data were collected using a structured survey questionnaire administered through the REDCap (Research Electronic Data Capture) electronic data capture system. The survey was distributed by identifying country leads for each participating country through both EUSEM RC and EUSEM RN and each county lead was tasked to recruit x to y representative respondents. The data collection began on y of z, 2025 and ended on c of b, 2025. 
 
-\begin{equation}
-\bar{y}_{jk} = \frac{1}{n_{jk}} \sum_{i=1}^{n_{jk}} y_{ijk}
-\end{equation}
+\subsection{Standardization}
 
-where $y_{ijk}$ is response of respondent $i$ in hospital j in country k,
-and $n_{jk}$ is number of respondents in that hospital.
+The data collection method allowed multiple responses from the same hospital and multiple responses from each country but did not standardize the number of responses over hospitals and countries. This approach can result in an unbalanced dataset: where high number of responses in one hospital may bias the results of the country and where high number of responses from one country can bias the results of the whole of Europe. For this reason, a set of standardizations were performed on each of these levels.
 
-Country-level mean (mean of hospital means)
+\paragraph{Respondent level} refers to the initial dataset where each row represents a response from one pariticipant. This level answers the question: what do the respondents of the survey think of this specific question. For the sake of clarity, each response will be further denoted as follows:
 
 \begin{equation}
-\bar{y}{k}^{(H)} = \frac{1}{m_k} \sum{j=1}^{m_k} \bar{y}_{jk}
+	\texttt{response} = \texttt{r}
 \end{equation}
 
-where $m_k = number of hospitals in country k$.
-
-(If you prefer the respondent-weighted version instead, use)
-
-\begin{equation}
-\bar{y}{k}^{(R)} = \frac{1}{N_k} \sum{j=1}^{m_k} n_{jk} \, \bar{y}_{jk}
-\end{equation}
-
-with \[N_k = \sum_{j=1}^{m_k} n_{jk}.\]
-
-Europe-level population-weighted mean
-
-\begin{equation}
-\bar{y}{E} = \frac{\sum{k=1}^{K} w_k \, \bar{y}{k}^{(H)}}{\sum{k=1}^{K} w_k}
-\end{equation}
-
-where $w_k$ is population weight (or sample weight) for country k,
-and K is number of countries in Europe.
+\paragraph{Hospital-level} refers to the responses standardized to the level of each hospital, where each row represents the mean of the responses $\texttt{r}$ from each hospital $\texttt{h}$. This level of standardization removes the bias that would otherwise be caused by many responses from one hospital and depicts the consensus of a hospitals based on the multiple responses. It answers the quetions: what do the individual hospitals think of a specific question? For the sake of clarity, hospital level responses can be denoted as follows:
 
 
+\paragraph{Country-level} means the hospital-level responses standardized to the level of each county, where each row represents the mean of the hospital level responses $\texttt{h}$ of each country. This level of standardizatino removes the bias potentially caused by disproportionate number of participating hospitals in one country. It answers the question: what does the country as a whole think of a specific question? Mathematically, country level responses take the following form:
+
+
+
+
+
+\paragraph{Europe-level} is finally the consensus of the whole of Europe based on the three aforementioned levels. It is a population-weighted mean of the country level responses and it removes the potential bias of small countries having a disproportionate weight on the consenus of the whole of Europe in relation to countries with bigger population. The population of each responding country was extracted from \textcolor{red}{tarkista}. The EU level takes thus the following matheamatical form:
+
+Later, whenever results are represented or discussed, the specific level is expressed using the terminology above.
 
 \section{Results}
 
@@ -196,6 +184,21 @@ and K is number of countries in Europe.
 \end{figure}
 
 \section{Discussion}
-\lipsum[1-8]
+
+
+\subsection{The extent, perceived implications and definitions}
+
+There are three main findings regarding the extent and definition of crowding: i) crowding affects countries disproportionely, ii) crowding is poorly defined and iii) crowding is considered to be at least a moderate problem.
+
+
+
+\subsection{The causes stratified by Asplin's model}
+
+
+\subsection{Demand management and interventions}
+
+
+
+
 
 \end{document}
