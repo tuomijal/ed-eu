@@ -62,14 +62,32 @@ The data collection method allowed multiple responses from the same hospital and
 
 \paragraph{Hospital-level} refers to the responses standardized to the level of each hospital, where each row represents the mean of the responses $\texttt{r}$ from each hospital $\texttt{h}$. This level of standardization removes the bias that would otherwise be caused by many responses from one hospital and depicts the consensus of a hospitals based on the multiple responses. It answers the quetions: what do the individual hospitals think of a specific question? For the sake of clarity, hospital level responses can be denoted as follows:
 
+\begin{equation}
+	\texttt{h}_i = \frac{1}{n_i}\sum_{j=1}^{n_i} \texttt{r}_{ij}
+\end{equation}
+
+where $\texttt{h}_i$ is the hospital-level response for hospital $i$, $\texttt{r}_{ij}$ is the $j$-th response from hospital $i$, and $n_i$ is the number of responses from hospital $i$.
+
 
 \paragraph{Country-level} means the hospital-level responses standardized to the level of each county, where each row represents the mean of the hospital level responses $\texttt{h}$ of each country. This level of standardizatino removes the bias potentially caused by disproportionate number of participating hospitals in one country. It answers the question: what does the country as a whole think of a specific question? Mathematically, country level responses take the following form:
+
+\begin{equation}
+	\texttt{c}_k = \frac{1}{m_k}\sum_{i=1}^{m_k} \texttt{h}_{ki}
+\end{equation}
+
+where $\texttt{c}_k$ is the country-level response for country $k$, $\texttt{h}_{ki}$ is the hospital-level response for the $i$-th hospital in country $k$, and $m_k$ is the number of hospitals in country $k$.
 
 
 
 
 
 \paragraph{Europe-level} is finally the consensus of the whole of Europe based on the three aforementioned levels. It is a population-weighted mean of the country level responses and it removes the potential bias of small countries having a disproportionate weight on the consenus of the whole of Europe in relation to countries with bigger population. The population of each responding country was extracted from \textcolor{red}{tarkista}. The EU level takes thus the following matheamatical form:
+
+\begin{equation}
+	\texttt{EU} = \sum_{k=1}^{K} w_k \cdot \texttt{c}_k
+\end{equation}
+
+where $\texttt{EU}$ is the Europe-level response, $\texttt{c}_k$ is the country-level response for country $k$, $w_k = \frac{p_k}{\sum_{k=1}^{K} p_k}$ is the population weight for country $k$, $p_k$ is the population of country $k$, and $K$ is the total number of countries.
 
 Later, whenever results are represented or discussed, the specific level is expressed using the terminology above.
 
