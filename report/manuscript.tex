@@ -198,28 +198,52 @@ Figure \ref{fig:horizon} presents the minimum forecasting horizon that responden
 
 Figure \ref{fig:enabled} presents the importance of interventions that could be enabled by demand forecasting, organized according to whether they affect input, throughput, or output. Output interventions were rated as substantially more important than input or throughput interventions. For output interventions, 63\% of respondents rated them as very important and 26\% as important, yielding a combined importance of 89\%. Throughput interventions received 26\% very important and 39\% important ratings, for a combined 65\%. Input interventions received 22\% very important and 41\% important ratings, for a combined 63\%. These findings align with the earlier results showing that output factors are perceived as the most important causes of crowding, and suggest that demand forecasting systems would be most valued for their ability to enable interventions that facilitate patient flow out of the emergency department.
 
+
 \begin{figure}[H]
     \centering
-        \includegraphics[width=0.5\textwidth]{../output/plots/enabled}
-        \caption{Importance of interventions that could be enabled by demand forecasting, categorized by input, throughput, and output.}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \includegraphics[width=\textwidth]{../output/plots/enabled}
+        \caption{}
         \label{fig:enabled}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.5\textwidth}
+        \includegraphics[width=\textwidth]{../output/plots/targets}
+        \caption{}
+        \label{fig:targets}
+    \end{subfigure}
+    \caption{}
+    \label{fig:enabled_and_targets}
 \end{figure}
 
 \section{Discussion}
 
+\paragraph{Implications to policymakers}
 
-\paragraph{The extent, perceived implications and definitions}
+91\% of respondents consider crowding to be at least a moderate problem and x\% consider the problem to be severe or very severe. At the same time, emergency departments in Europe are crowded on z\% of days on average. These findings underline the importance and severity of the problem as a public health issue.
 
-There are three main findings regarding the extent and definition of crowding: i) crowding affects countries disproportionely, ii) crowding is poorly defined and iii) crowding is considered to be at least a moderate problem.
+Exit block was clearly the most important perceived cause of the problem and by extension the most important solution and intervention. This is important for policymakers and hospital management alike: it means that solving emergency department crowding does not happen primarily at the ED but at the more systemic level of inpatient operations.
+
+Policymakers should also consider that the problem affects different nations disproportionately and they should be aware of where their country is situated in comparison to other european countries. Naturally, countries where the problem is considered to be 
+
+\paragraph{Implications to machine learning practitioners}
+
+The most important finding for the machine learning practitioners is the mismatch between perceived benefit (x\%) and rate of adoption of demand management solutions or other forecasting software implementations (y\%). Based on this finding, we encourage software engineers to engage more actively with clinical stakeholders and open the discussion on how to bridge this gap and build solutions that can actually benefit the day-to-day operations management. 
+
+However, it is important to understand that engaging with emergency department stakeholders will not be enough. The most important interventions include dynamically adjusting the follow-up care bed capacity and those interventions are not in the hands of the ED stakeholders. Building and implementing these solutions thus requires inclusion of at least three constituents: machine learning pracitioners, ED management and inpatient operations management.
+
+From a practical standpoint, the x\% of respondents would be satisfied with relatively short forecast horizon of 24 hours or less and the vast majority of y\% wished to see the future 7 days ahead. This in encouragind because difficulty of forecasting grows exponentially as a function of the forecast horizon. Practitioners should thus focus on building these short-time-span early-warning systems before aiming to expand the size of the predictive window.
+
+\paragraph{Implications to emergency department stakeholders}
+
+ Only z\% of hospitals have a formal definition for crowding which is surprising when contrasted with the fact that 91\% of hospitals consider crowding to be at least a moderate problem. How can it be that most consider crowding to be a problem if most of the respondents don't even have a formal defintion for it? The answer is -- of course -- that crowding is typically defined as the 'gut feeling' of the clinicians. This is a problem because in order to articulate the problem and demonstrate its development, clinical stakeholders have to be able to objectively, quantitatively and repeatedly demonstrate and articulate the extent of the problem to both hospital management and policymakers.
+
+ Adoption of the existing crowding frameworks such as NEDOCS or EDWIN were rare which might be related to their relative complexity and poor adaptability to European emergency medicine setting. We thus encourage both the development and adaption of a standardized European crowding metric that can then be used to benchmarking, research, operations management and continuous operational improvement in collaboration with hospital management and policymakers. One potential approach is wider adoption of thresholds based on emergency department occupancy ratio which is mathematically easy to express, easy to understand and readily transferrable to any ED setting.
 
 
 
-\paragraph{The causes stratified by Asplin's model}
+\subsection{Limitations} The frequencies of the responses from each country followed a Pareto distribution where -- for example -- the United Kingdom provided a high number of responses (n=92) as compared to Belgium, Lithuania or Switzerland (n=1). Although the responses were standardized to eliminate the evident mathematical bias this creates, there is not a `post hoc` method to remove the...
 
-
-\paragraph{Demand management and interventions}
-
-\subsection{Limitations} The frequencies of the responses from each country followed a Pareto distribution where -- for example -- the United Kingdom provided a high number of responses (n=92) as compared to Belgium, Lithuania or Switzerland (n=1). Although the responses were standardized to eliminate the evident mathematical bias this creates, there is not a `post hoc` method to remove the 
+The lack of shared definition for crowding was one of the key findings of this study. It is a limitation because it means that the reported crowding frequency is thus based on the intuition of the respondents instead of an objective measure. It might be that in some countries higher level of occupancy or longer length of stay is considered acceptable due to cultural differences which might bias the results in either direction. 
 
 
 

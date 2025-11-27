@@ -20,8 +20,9 @@ TABLES = output/tables/description.tex
 output/manuscript.pdf: report/manuscript.tex $(PLOTS) $(TABLES)
 	cd report\
 	&& pdflatex manuscript.tex\
-	&& open manuscript.pdf\
-	&& mv manuscript.pdf ../output/manuscript.pdf
+	&& mv manuscript.pdf ../output/manuscript.pdf\
+	&& cd ..\
+	&& open output/manuscript.pdf\
 
 data/base/data.csv: notebooks/make_basedata.ipynb
 	cd notebooks\
