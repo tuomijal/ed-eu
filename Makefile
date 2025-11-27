@@ -20,6 +20,7 @@ TABLES = output/tables/description.tex
 output/manuscript.pdf: report/manuscript.tex $(PLOTS) $(TABLES)
 	cd report\
 	&& pdflatex manuscript.tex\
+	&& pdflatex manuscript.tex\
 	&& mv manuscript.pdf ../output/manuscript.pdf\
 	&& cd ..\
 	&& open output/manuscript.pdf\

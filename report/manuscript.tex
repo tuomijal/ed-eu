@@ -9,6 +9,8 @@
 \usepackage{makecell}
 \usepackage{xcolor}
 \usepackage{amsmath}
+\usepackage{hyperref}
+
 
 
 \title{Emergency department crowding in Europe: Causes, effects, extent and solutions as evaluated by 364 emergency department physicians from 26 European countries}
@@ -35,13 +37,13 @@ Second, the causes of crowding have been hypothesised and it is certainly easy t
 
 Third, there is an increasing interest in applying demand management solutions to the crowding problem. The rationale here is simple and well-justified: if we can predict when the ED will be crowded, we can enable pre-emptive meausures to prevent crowding and save lives in the process. This is analogous to patient monitoring that is extensively done in all hospitals dedicated to quality care: instead of utilizing a national early warning score to predict the probability of death for a single patient, ED demand management effort aims to create an early warning score to predict the probability of death for a cohort of ED patients. These articles have reached a level of high mathematical and compuational complexity and demonstrated sometimes impressive performance retrospectively. However, we have seen very little engagement with the ED stakeholders regarding many important questions in this area such as: do clinicians actually want a predictive model to their ED? If yes, would it enable relevant interventions to alleviate crowding problem? Who -- if anyone -- is able to act based on the information? What should we actually predict for: arrivals, occupancy or something else?
 
-In this article, we aim to bridge the gap between policymakers, emergency department physicians and mathematicians by asking these unclear questions from the people who know the answers first hand: those clinicians who work in the front lines of the emergency departments all over Europe.
+In this article, we aim to bridge the gap between policymakers, emergency department physicians and mathematicians by asking these unclear questions from the people who know the answers first hand: those clinicians who work in the front lines of the emergency departments all over Europe. Our contributions are as follows: 
 
 % This might seem mundane but it demonstrates something important: almost everyone has a first hand experience visiting an ED and that experience ends up shaping the image of the healthcare system.
 
   
-\textcolor{red}{Lisäanalyysi: ruuhka terveydenhuollon kustannusten funktiona}
-\textcolor{red}{Lisäanalyysi: ruuhka yksityinen vs. julkinen terveydenhuolto}
+% \textcolor{red}{Lisäanalyysi: ruuhka terveydenhuollon kustannusten funktiona}
+% \textcolor{red}{Lisäanalyysi: ruuhka yksityinen vs. julkinen terveydenhuolto}
 
 
 
@@ -88,34 +90,29 @@ where $\texttt{c}_k$ is the country-level response for country $k$, $\texttt{h}_
 	\texttt{EU} = \sum_{k=1}^{K} w_k \cdot \texttt{c}_k
 \end{equation}
 
-where $\texttt{EU}$ is the Europe-level response, $\texttt{c}_k$ is the country-level response for country $k$, $w_k = \frac{p_k}{\sum_{k=1}^{K} p_k}$ is the population weight for country $k$, $p_k$ is the population of country $k$, and $K$ is the total number of countries.
-
-Later, whenever results are represented or discussed, the specific level is expressed using the terminology above.
+where $\texttt{EU}$ is the Europe-level response, $\texttt{c}_k$ is the country-level response for country $k$, $w_k = \frac{p_k}{\sum_{k=1}^{K} p_k}$ is the population weight for country $k$, $p_k$ is the population of country $k$, and $K$ is the total number of countries. Later, whenever results are represented or discussed, the specific level is expressed using the terminology above.
 
 \section{Results}
 
 
-\subsection{Respondents}
-
-The respondent characteristics are presented in Table \ref{tab:description}. There were a total of 364 responses from 254 individual hospitals and from 26 individual countries. The number of responses from different countries was heavily Pareto distributed: for example the United Kindgom and Turkey provided 92 and 39 responses respectively whereas some countires such as Belgium, Lithuania or Switzerland had only one respondent each. 163 (45\%) of respondents were specialists, 91 (25\%) department heads, 65 (18\%) residents and 14 (4\%) were trainees. The remaining 31 (9\%) respondents described their position as \emph{Other}. Most of the responses were provided by physicians working at a tertiary hospital 217 (59\%) followed by secondary care with 117 (32\%) and primary care hospitals with 23 (6\%) responses. 7 (2\%) reported their hospital to belong to \emph{Other} category.
-
+\paragraph{Respondent characteristics} The respondent characteristics are presented in Table \ref{tab:description}. There were a total of 364 responses from 254 individual hospitals and from 26 individual countries. The number of responses from different countries was heavily Pareto distributed: for example the United Kindgom and Turkey provided 92 and 39 responses respectively whereas some countires such as Belgium, Lithuania or Switzerland had only one respondent each. 163 (45\%) of respondents were specialists, 91 (25\%) department heads, 65 (18\%) residents and 14 (4\%) were trainees. The remaining 31 (9\%) respondents described their position as \emph{Other}. Most of the responses were provided by physicians working at a tertiary hospital 217 (59\%) followed by secondary care with 117 (32\%) and primary care hospitals with 23 (6\%) responses. 7 (2\%) reported their hospital to belong to \emph{Other} category.
 
 \input{../output/tables/description.tex}
 
-\subsection{Extent, definitions and consequenses}
+\subsection{Extent, definitions and consequenses of crowding}
 
 The geographic distribution of crowding across Europe reveals substantial variation between countries. Figure \ref{fig:crowding_map} presents the proportion of crowded days during a typical operating month as reported by respondents and aggregated to country level. The map demonstrates that crowding is widespread across the continent, with particularly high prevalence in Ireland, Malta, Greece, the United Kingdom, and Turkey. In contrast, countries such as Lithuania, Switzerland, Denmark, the Netherlands, and Spain reported comparatively lower proportions of crowded days. This geographic heterogeneity suggests that crowding is not uniformly distributed across European healthcare systems and may reflect differences in healthcare infrastructure, population demographics, or healthcare utilization patterns.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-        \includegraphics[width=1.0\textwidth]{../output/plots/crowding_map}
+        \includegraphics[width=0.7\textwidth]{../output/plots/crowding_map}
         \caption{Map of the proportion of crowded days during a normal operating month as estimated by the respondents and aggregated to country level.}
         \label{fig:crowding_map}
 \end{figure}
 
 Figure \ref{fig:country_crowding} presents the distribution of reported crowding days across countries in greater detail. The median proportion of crowded days ranged from 0\% in Lithuania to 84\% in Ireland. Several countries demonstrated particularly high median values, including Malta (78\%), Greece (78\%), the United Kingdom (73\%), and Turkey (70\%). In contrast, Switzerland, Denmark, the Netherlands, and Spain reported median values below 10\%. The boxplots reveal considerable within-country variation in most participating nations, indicating that individual hospitals within the same country experience crowding to varying degrees. Several countries, including the United Kingdom, Turkey, and Greece, demonstrate both high median values and substantial interquartile ranges, suggesting that crowding is both severe and heterogeneous within these healthcare systems. The presence of outliers in multiple countries further underscores the variable nature of emergency department crowding even within relatively uniform healthcare policy environments.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
         \includegraphics[width=1.0\textwidth]{../output/plots/country_crowding}
         \caption{The proportion of crowded days during a normal operating month as estimated by the respondents.}
@@ -124,7 +121,7 @@ Figure \ref{fig:country_crowding} presents the distribution of reported crowding
 
 The perceived severity of crowding is presented in Figure \ref{fig:severity}. At the EU level, 42\% of respondents rated crowding as severe and 17\% as very severe, meaning that a total of 59\% considered crowding to be a severe or very severe problem. An additional 31\% rated crowding as moderate, while only 9\% characterized it as slight and less than 1\% indicated that crowding was not a problem at all. In total, 91\% of respondents rated crowding as at least a moderate problem. This near-universal recognition of crowding as a substantial issue provides empirical support for the increasing attention the problem has received in both academic literature and healthcare policy discussions. The consistency of these perceptions across diverse healthcare systems and geographic regions suggests that crowding represents a systemic challenge rather than a localized phenomenon.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
         \includegraphics[width=1.0\textwidth]{../output/plots/severity}
         \caption{Perceived severity of emergency department crowding based on country level statistics}
@@ -133,14 +130,14 @@ The perceived severity of crowding is presented in Figure \ref{fig:severity}. At
 
 Despite the widespread recognition of crowding as a severe problem, Figure \ref{fig:definition} reveals a striking absence of standardized definitions. At the EU level, 75\% of respondents reported that their emergency department had no formal definition of crowding. Among those who did report using a definition, 15\% used locally developed criteria categorized as ``Other,'' while only 7\% used NEDOCS, 2\% used EDOR threshold, and 1\% used EDWIN. This lack of standardized measurement presents a fundamental challenge for both research and policy intervention. Without consistent definitions, it becomes difficult to compare crowding severity across institutions, evaluate the effectiveness of interventions, or establish evidence-based benchmarks for acceptable emergency department performance.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
         \includegraphics[width=1.0\textwidth]{../output/plots/definition}
         \caption{Distribution of utilized crowding definitions aggregated to EU level}
         \label{fig:definition}
 \end{figure}
 
-\subsection{Causes}
+\subsection{Causes of crowding stratified by Asplin's model}
 
 The perceived causes of emergency department crowding are presented in Figure \ref{fig:causes}, organized according to Asplin's conceptual model which categorizes contributing factors into input, throughput, and output components. Respondents rated each potential cause on a five-point scale from unimportant to very important. The results are aggregated to EU level and presented as the proportion of respondents selecting each importance category.
 
@@ -162,7 +159,7 @@ Output factors received the highest importance ratings overall. Organisational c
 
 Figure \ref{fig:interventions} presents the interventions that emergency departments report using when crowding occurs. The most commonly reported intervention was opening additional inpatient beds among wards, used by 34\% of respondents. Adjusting decision making in triage was reported by 19\% of respondents, while communicating the crowding status to the catchment area population to limit input was used by 18\% of respondents. Calling in additional staff to the emergency department was reported by 16\% of respondents, and 14\% reported using other interventions. These findings indicate that output-focused interventions, particularly increasing bed availability, are the most commonly employed response to crowding.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
         \includegraphics[width=1.0\textwidth]{../output/plots/interventions}
         \caption{Interventions used when crowding occurs, based on EU-level statistics.}
@@ -171,15 +168,18 @@ Figure \ref{fig:interventions} presents the interventions that emergency departm
 
 Regarding the potential role of demand forecasting and early warning systems, respondents demonstrated substantial interest in these technologies. As shown in Figure \ref{fig:benefit}, 64\% of respondents believed that sufficiently accurate patient volume forecasting or crowding early warning software would help alleviate the crowding problem, while 36\% did not believe it would help. However, Figure \ref{fig:usage} reveals a striking gap between perceived potential and current implementation: only 6\% of respondents reported currently using patient volume forecasting or crowding early warning software to guide decision making, while 94\% reported not using such systems. This disparity suggests that while there is substantial interest in demand management approaches, their practical implementation remains limited across European emergency departments.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
-        \includegraphics[width=\textwidth]{../output/plots/benefit}
+        \centering
+        \includegraphics[width=0.9\textwidth]{../output/plots/benefit}
         \caption{Would sufficiently accurate patient volume forecasting or crowding early warning software help alleviate the crowding problem?}
         \label{fig:benefit}
-    \end{subfigure}
+    \end{subfigure}%
+    \hfill
     \begin{subfigure}[b]{0.4\textwidth}
-        \includegraphics[width=\textwidth]{../output/plots/usage}
+        \centering
+        \includegraphics[width=0.9\textwidth]{../output/plots/usage}
         \caption{Do you currently use a patient volume forecasting or crowding early warning software to guide decision making?}
         \label{fig:usage}
     \end{subfigure}
@@ -189,7 +189,7 @@ Regarding the potential role of demand forecasting and early warning systems, re
 
 Figure \ref{fig:horizon} presents the minimum forecasting horizon that respondents considered necessary for such systems to be useful. The responses were distributed across multiple time scales, with short to medium-term horizons receiving the most support. Two to seven days was the most frequently selected horizon at 30\%, followed closely by eight to 24 hours at 29\%. Shorter horizons of one to eight hours were preferred by 17\% of respondents. Medium-term horizons of one to two weeks received 13\% of responses, while longer horizons were less popular: three to four weeks and one to three months each received 5\% of responses, and four to 12 months received only 2\%. These results indicate a preference for forecasting systems that operate on timescales ranging from several hours to several days, which aligns with the operational planning horizons of most emergency departments.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
         \includegraphics[width=1.0\textwidth]{../output/plots/horizon}
         \caption{Minimum forecasting horizon required for forecasting software to be useful.}
@@ -199,7 +199,7 @@ Figure \ref{fig:horizon} presents the minimum forecasting horizon that responden
 Figure \ref{fig:enabled} presents the importance of interventions that could be enabled by demand forecasting, organized according to whether they affect input, throughput, or output. Output interventions were rated as substantially more important than input or throughput interventions. For output interventions, 63\% of respondents rated them as very important and 26\% as important, yielding a combined importance of 89\%. Throughput interventions received 26\% very important and 39\% important ratings, for a combined 65\%. Input interventions received 22\% very important and 41\% important ratings, for a combined 63\%. These findings align with the earlier results showing that output factors are perceived as the most important causes of crowding, and suggest that demand forecasting systems would be most valued for their ability to enable interventions that facilitate patient flow out of the emergency department.
 
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
         \includegraphics[width=\textwidth]{../output/plots/enabled}
@@ -217,28 +217,25 @@ Figure \ref{fig:enabled} presents the importance of interventions that could be 
 
 \section{Discussion}
 
-\paragraph{Implications to policymakers}
+In this study, we provide important insights to policymakers, emergency department management and demand planning practitioners. These findings are their meaning is discussed below stratified based on these constituents.
 
-91\% of respondents consider crowding to be at least a moderate problem and x\% consider the problem to be severe or very severe. At the same time, emergency departments in Europe are crowded on z\% of days on average. These findings underline the importance and severity of the problem as a public health issue.
+\paragraph{Implications to policymakers and hospital management}
 
-Exit block was clearly the most important perceived cause of the problem and by extension the most important solution and intervention. This is important for policymakers and hospital management alike: it means that solving emergency department crowding does not happen primarily at the ED but at the more systemic level of inpatient operations.
-
-Policymakers should also consider that the problem affects different nations disproportionately and they should be aware of where their country is situated in comparison to other european countries. Naturally, countries where the problem is considered to be 
-
-\paragraph{Implications to machine learning practitioners}
-
-The most important finding for the machine learning practitioners is the mismatch between perceived benefit (x\%) and rate of adoption of demand management solutions or other forecasting software implementations (y\%). Based on this finding, we encourage software engineers to engage more actively with clinical stakeholders and open the discussion on how to bridge this gap and build solutions that can actually benefit the day-to-day operations management. 
-
-However, it is important to understand that engaging with emergency department stakeholders will not be enough. The most important interventions include dynamically adjusting the follow-up care bed capacity and those interventions are not in the hands of the ED stakeholders. Building and implementing these solutions thus requires inclusion of at least three constituents: machine learning pracitioners, ED management and inpatient operations management.
-
-From a practical standpoint, the x\% of respondents would be satisfied with relatively short forecast horizon of 24 hours or less and the vast majority of y\% wished to see the future 7 days ahead. This in encouragind because difficulty of forecasting grows exponentially as a function of the forecast horizon. Practitioners should thus focus on building these short-time-span early-warning systems before aiming to expand the size of the predictive window.
+91\% of respondents consider crowding to be at least a moderate problem and 59\% consider the problem to be severe or very severe. At the same time, emergency departments in Europe are crowded on 39\% of days on average. These findings underline the importance and severity of the problem as a public health issue. Exit block was clearly the most important perceived cause of the problem and by extension the most important solution and intervention. This is important for policymakers and hospital management alike: it means that solving emergency department crowding does not happen primarily at the ED but at the more systemic level of inpatient operations. Policymakers should also consider that the problem affects different nations disproportionately and they should be aware of where their country is situated in comparison to other european countries. Naturally, countries where the problem is considered to be 
 
 \paragraph{Implications to emergency department stakeholders}
 
- Only z\% of hospitals have a formal definition for crowding which is surprising when contrasted with the fact that 91\% of hospitals consider crowding to be at least a moderate problem. How can it be that most consider crowding to be a problem if most of the respondents don't even have a formal defintion for it? The answer is -- of course -- that crowding is typically defined as the 'gut feeling' of the clinicians. This is a problem because in order to articulate the problem and demonstrate its development, clinical stakeholders have to be able to objectively, quantitatively and repeatedly demonstrate and articulate the extent of the problem to both hospital management and policymakers.
+ Only 25\% of hospitals have a formal definition for crowding which is surprising when contrasted with the fact that 91\% of hospitals consider crowding to be at least a moderate problem. How can it be that most consider crowding to be a problem if most of the respondents don't even have a formal defintion for it? The answer is -- of course -- that crowding is typically defined as the 'gut feeling' of the clinicians. This is a problem because in order to articulate the problem and demonstrate its development, clinical stakeholders have to be able to objectively, quantitatively and repeatedly demonstrate and articulate the extent of the problem to both hospital management and policymakers.
 
  Adoption of the existing crowding frameworks such as NEDOCS or EDWIN were rare which might be related to their relative complexity and poor adaptability to European emergency medicine setting. We thus encourage both the development and adaption of a standardized European crowding metric that can then be used to benchmarking, research, operations management and continuous operational improvement in collaboration with hospital management and policymakers. One potential approach is wider adoption of thresholds based on emergency department occupancy ratio which is mathematically easy to express, easy to understand and readily transferrable to any ED setting.
 
+\paragraph{Implications to machine learning practitioners}
+
+The most important finding for the machine learning practitioners is the mismatch between perceived benefit (64\%) and rate of adoption of demand management solutions or other forecasting software implementations (6\%). Based on this finding, we encourage software engineers to engage more actively with clinical stakeholders and open the discussion on how to bridge this gap and build solutions that can actually benefit the day-to-day operations management. 
+
+However, it is important to understand that engaging with emergency department stakeholders will not be enough. The most important interventions include dynamically adjusting the follow-up care bed capacity and those interventions are not in the hands of the ED stakeholders. Building and implementing these solutions thus requires inclusion of at least three constituents: machine learning pracitioners, ED management and inpatient operations management.
+
+From a practical standpoint, the 46\% of respondents would be satisfied with relatively short forecast horizon of 24 hours or less and the vast majority of 76\% wished to see the future 7 days ahead. This in encouragind because difficulty of forecasting grows exponentially as a function of the forecast horizon. Practitioners should thus focus on building these short-time-span early-warning systems before aiming to expand the size of the predictive window.
 
 
 \subsection{Limitations} The frequencies of the responses from each country followed a Pareto distribution where -- for example -- the United Kingdom provided a high number of responses (n=92) as compared to Belgium, Lithuania or Switzerland (n=1). Although the responses were standardized to eliminate the evident mathematical bias this creates, there is not a `post hoc` method to remove the...
